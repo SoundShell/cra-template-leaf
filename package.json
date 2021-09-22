@@ -13,7 +13,6 @@
     "template",
     "typescript",
     "redux",
-    "SoundShell",
     "react-redux",
     "styled-components",
     "react-intl",
@@ -37,9 +36,9 @@
     "template.json"
   ],
   "devDependencies": {
-    "@SoundShell/toolkit": "^1.5.1",
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-react": "^7.7.4",
+    "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@types/jest": "^24.0.0",
@@ -75,7 +74,6 @@
   },
   "dependencies": {
     "@loadable/component": "^5.15.0",
-    "@reduxjs/toolkit": "^1.6.1",
     "react-intl": "^5.20.10"
   }
 }
