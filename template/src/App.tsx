@@ -9,7 +9,7 @@ import { RootState } from './app/store';
 import { initAppState, selectApp } from './appSlice';
 import GlobalStyle from './index.style';
 import locale, { Locale } from './locales';
-import theme, { ThemeItem as ThemeItemType } from './themes';
+import theme, { ThemeValue } from './themes';
 
 const Home = loadable(() => import('./views/Home'));
 const ErrorPage = loadable(() => import('./views/ErrorPage'));
@@ -19,7 +19,7 @@ export interface AppStateEntity {
   projectId: string | null;
   locale: Locale;
   auth: { token: string | null; permissions: string[] };
-  theme: ThemeItemType;
+  theme: ThemeValue;
 }
 
 const App = () => {

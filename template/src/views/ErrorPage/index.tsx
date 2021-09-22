@@ -9,7 +9,7 @@ import Browser from '../../assets/browser.svg';
 import history from '../../history';
 import { Back, Container, ErrorImg } from './ErrorPage.style';
 
-type ErrorType = '403' | '500' | '401' | 'browser';
+type ErrorType = '401' | '403' | '500' | 'browser';
 
 interface ErrorPageProps
   extends RouteComponentProps<{

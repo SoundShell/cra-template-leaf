@@ -11,10 +11,10 @@ import sunriseYellow from './sunriseYellow';
 import sunsetOrange from './sunsetOrange';
 import volcano from './volcano';
 
-export type ThemeItem = Record<keyof typeof daybreakBlue, string>;
+export type ThemeValue = Record<keyof typeof daybreakBlue, string>;
 
 export interface Theme {
-  [prop: string]: ThemeItem;
+  [key: string]: ThemeValue;
 }
 
 const theme: Theme = {

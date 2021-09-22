@@ -1,8 +1,8 @@
 import styled, { keyframes } from 'styled-components/macro';
-import { ThemeItem as ThemeItemType } from '../../themes';
+import { ThemeValue } from '../../themes';
 
-export interface ThemeItemProps {
-  themeColor: ThemeItemType;
+export interface ThemeValueProps {
+  themeValue: ThemeValue;
 }
 
 const appLogoFloat = keyframes`
@@ -21,6 +21,7 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   width: 500px;
+  margin-bottom: 10px;
 `;
 
 export const Logo = styled.img`
@@ -44,16 +45,16 @@ export const ThemeList = styled.div`
   width: 100%;
 `;
 
-export const ThemeItem = styled.button<ThemeItemProps>`
+export const ThemeItem = styled.button<ThemeValueProps>`
   font-size: 14px;
   color: #ffffff;
   padding: 20px;
-  background-color: ${(props) => props.themeColor.color6};
+  background-color: ${(props) => props.themeValue.color6};
   &:hover {
-    background-color: ${(props) => props.themeColor.color5};
+    background-color: ${(props) => props.themeValue.color5};
   }
   &:active {
-    background-color: ${(props) => props.themeColor.color7};
+    background-color: ${(props) => props.themeValue.color7};
   }
 `;
 
@@ -64,7 +65,7 @@ export const LocalList = styled(ThemeList)`
 export const LocalItem = styled.button`
   font-size: 14px;
   color: #ffffff;
-  padding: 20px;
+  padding: 10px;
   background-color: ${(props) => props.theme.color6};
   width: 230px;
   user-select: node;
@@ -90,5 +91,5 @@ export const LinkList = styled(LocalList)`
 
 export const TipMessage = styled.p`
   color: ${(props) => props.theme.color6};
-  margin: 20px 0;
+  margin: 16px 0;
 `;

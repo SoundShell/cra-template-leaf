@@ -36,7 +36,7 @@ const Home = () => {
         {Object.entries(state.theme).map(([key, value]) => (
           <ThemeItem
             key={key}
-            themeColor={value}
+            themeValue={value}
             onClick={() => dispatch(setAppTheme(value))}
           />
         ))}

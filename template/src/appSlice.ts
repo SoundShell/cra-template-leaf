@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { AppStateEntity } from './App';
 import { RootState } from './app/store';
 import { Locale } from './locales';
-import { ThemeItem as ThemeItemType } from './themes';
+import { ThemeValue } from './themes';
 
 export interface AppState {
   entity: AppStateEntity;
@@ -25,7 +25,7 @@ const appSlice = createSlice({
       state.status = 'succeeded';
     },
 
-    setAppTheme(state, action: PayloadAction<ThemeItemType>) {
+    setAppTheme(state, action: PayloadAction<ThemeValue>) {
       state.entity.theme = action.payload;
     },
 
